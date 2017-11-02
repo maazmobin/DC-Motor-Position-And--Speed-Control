@@ -71,7 +71,7 @@ void loop() {
       previousMillis = currentMillis;
       encCurr = enc_sign * enc.read(); enc.write(0);
       encBuff += encCurr;
-      motorPosition = (encBuff/ticksPerRev) * 3.142; //3.142 is the convertion towards radians
+      motorPosition = (encBuff/ticksPerRev) * 2 * 3.142; //3.142 is the convertion towards radians
       encRate=((float)encCurr/(float)Interval) * 1000.0;
             
       echoData();      
